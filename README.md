@@ -15,4 +15,5 @@ subspace can be recovered using only one pass of training data. Empirical result
 the correct parameter subspaces, and outperforms state-of-the-arts in predicting 
 neurodegenerative clinical scores using information in brain imaging. 
 
-
+## Compatibility
+The code is compatible with python 3.5
