@@ -95,9 +95,9 @@ def algorithm1(X, Y, lamb, r, sigma,eta,U_ini,V_ini,U_orig):
             yt = y[t][0]
             ut_next = algorithm_U(x,yt,V_next,ut,lamb,sigma,eta)
             U_next[t,:] = ut_next
-        U_iter[i] = lg.norm((U_next - U_current), 'fro')
+        U_iter[i] = lg.norm((U_next - U_current), 'fro') / np.prod(U_current.shape)
         U_current = U_next
-        U_dif[i] = lg.norm((U_current - U_orig), 'fro') / lg.norm(U_orig,'fro')
+        U_dif[i] = lg.norm((U_current - U_orig), 'fro') / np.prod(U_current.shape)
 
         loss[i] = calculate_loss(x, y, U_current, V_current, sigma, lamb)
 
