@@ -4,7 +4,7 @@ import scipy.io as sio
 import math
 from FeedForwardNet import FeedForward
 
-# Load your data here. Synthetic or the real world.
+
 m = sio.loadmat('./Data.mat')
 train_data, train_target, test_data, test_target = m['training_X'], m['training_Y'], m['test_X'], m['test_Y']
 
@@ -16,7 +16,6 @@ epochs = 5000
 ffn = FeedForward(T,d)
 
 cost = ffn.calculate_loss()
-## I used simple gradient descent to be able to compare with the subspace network since Algorithm1 uses gradient descent. Other optimizer can be tried.(Adam, Adagrad, etc.)
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=learning_rate).minimize(cost) 
 
 init = tf.global_variables_initializer()

@@ -24,7 +24,6 @@ epochs = 5000
 ffn = FeedForward(U1,V1,U2,V2,U3,V3,d,T)
 
 cost = ffn.calculate_loss()
-# I used simple gradient descent to be able to compare with the subspace network since Algorithm1 uses gradient descent. Other optimizer can be tried.
 optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 
 init = tf.global_variables_initializer()

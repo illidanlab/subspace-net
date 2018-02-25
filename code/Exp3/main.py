@@ -1,5 +1,5 @@
 # Main program for Algorithm 3
-# One split from synthetic data is shared in input folder
+# One sample of synthetic data is shared in input folder
 
 import numpy as np
 import scipy.io as sio

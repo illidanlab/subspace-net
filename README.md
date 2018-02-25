@@ -21,3 +21,13 @@ The current version of the draft is available [here](https://arxiv.org/abs/1802.
 The code is compatible with python 3.5
 
 ## Code Usage
+In each folder, Algortithm1.py, Algorithm3.py refers to corresponding algorithms in the original paper (Algorithm2 is included in Algorithm1.py). LowRankMF.py is low-rank matrix factorization algorithm for a given matrix.
+
+- Exp1 generates Figure 2 and 3 in original paper;
+- Exp2 generates Table 1 in original paper;
+- Exp3 generates generalization performance for subspace network in section 4.1 (A sample of synthetic data is provided in input folder). 
+
+
+
+
+
